@@ -1,1 +1,269 @@
-# Rudy-Web
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>$RUDY - Official Crypto Coin</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background-color: #A32638; /* Christmas Cranberry Red */
+        color: white;
+        scroll-behavior: smooth;
+    }
+
+    /* HEADER */
+    .header {
+        background: url('header-image.jpg') no-repeat center center/cover;
+        height: 28vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        animation: fadeIn 2s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    .header h1 {
+        font-size: 60px;
+        margin: 0;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    /* NAVIGATION */
+    nav {
+        background-color: #1a1a1a;
+        padding: 10px 20px;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-left a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .nav-left a:hover {
+        color: #ffcc00;
+    }
+
+    .nav-right img {
+        height: 45px;
+    }
+
+    /* SECTIONS */
+    .section {
+        padding: 60px 20px;
+        max-width: 900px;
+        margin: auto;
+        animation: fadeInUp 1s ease-in-out;
+        position: relative;
+        z-index: 2;
+    }
+
+    @keyframes fadeInUp {
+        from {opacity: 0; transform: translateY(30px);}
+        to {opacity: 1; transform: translateY(0);}
+    }
+
+    h2 {
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .center {
+        text-align: center;
+    }
+
+    /* ICON LINKS */
+    .icon-links, .social-links {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+    }
+
+    .icon-links img, .social-links img {
+        width: 70px;
+        height: 70px;
+        transition: transform 0.3s;
+    }
+
+    .icon-links img:hover, .social-links img:hover {
+        transform: scale(1.12);
+    }
+
+    footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #111;
+        margin-top: 30px;
+        font-size: 14px;
+        opacity: 0.7;
+    }
+
+    /* ❄ SNOW ANIMATION */
+    .snow {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        z-index: 1;
+    }
+
+    .snow span {
+        position: absolute;
+        top: -10px;
+        left: calc(100% * var(--x));
+        width: 8px;
+        height: 8px;
+        background: white;
+        border-radius: 50%;
+        opacity: 0.8;
+        animation: fall linear infinite;
+        animation-duration: calc(10s + var(--d));
+        animation-delay: calc(var(--l) * -1s);
+    }
+
+    @keyframes fall {
+        0% {
+            transform: translateY(0) translateX(0);
+        }
+        100% {
+            transform: translateY(110vh) translateX(calc(-50px + 100px * var(--x)));
+        }
+    }
+</style>
+</head>
+
+<body>
+
+<!-- ❄ SNOW EFFECT -->
+<div class="snow"></div>
+<script>
+for(let i = 0; i < 50; i++){
+    let s = document.createElement("span");
+    s.style.setProperty("--x", Math.random());
+    s.style.setProperty("--d", Math.random() * 5);
+    s.style.setProperty("--l", Math.random() * 5);
+    document.querySelector(".snow").appendChild(s);
+}
+</script>
+
+<!-- HEADER -->
+<div class="header">
+    <h1>
+        <img src="C:\Users\Michael Macalinao\Downloads\Rudy-Web\website-header.png.jpg" alt="RUDY Logo" style="height:250px;">
+    </h1>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="nav-left">
+        <a href="#about">About</a>
+        <a href="#links">Webpages</a>
+        <a href="#socials">Social Media</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <div class="nav-right">
+        <img src="rudy-logo.png" alt="RUDY Logo">
+    </div>
+</nav>
+
+<!-- ABOUT -->
+<section id="about" class="section">
+    <h2>About $RUDY</h2>
+    <p class="center">
+        <b>$RUDY</b> is a community-driven crypto project built with passion, innovation,  
+        and future-focused development. Created by a dedicated developer, $RUDY aims  
+        to grow through transparency, strong community support, and long-term vision.
+    </p>
+
+    <p class="center" style="margin-top:20px;">
+        Developer: <b>RUDY</b> — committed to building a trusted decentralized asset.
+    </p>
+</section>
+
+<!-- WEBPAGES -->
+<section id="links" class="section">
+    <h2>Project Webpages</h2>
+
+    <div class="icon-links">
+        <a href="https://dexscreener.com/solana/cnw3vtegdoe4zedprujrqfa9ygthfqvbmhdg7ps9nvhw" target="_blank">
+            <img src="C:\Users\Michael Macalinao\Downloads\Rudy-Web\dexscreener-logo.png.jpg" alt="DEXScreener">
+        </a>
+
+        <a href="https://pump.fun/coin/3whEvJ3ByhtmBLJQJ1nYfTgPEmm3aha7bWzuXifNpump" target="_blank">
+            <img src="C:\Users\Michael Macalinao\Downloads\Rudy-Web\pumpfun-logo.png.jpg" alt="Pump Fun">
+        </a>
+
+        <a href="https://solscan.io/token/3whEvJ3ByhtmBLJQJ1nYfTgPEmm3aha7bWzuXifNpump#holders" target="_blank">
+            <img src="C:\Users\Michael Macalinao\Downloads\Rudy-Web\solscan-logo.png.jpg" alt="Solscan">
+        </a>
+    </div>
+</section>
+
+<!-- SOCIAL MEDIA -->
+<section id="socials" class="section">
+    <h2>Social Media</h2>
+
+    <div class="social-links">
+        <a href="https://www.facebook.com/share/17XBJwQ5ME/?mibextid=wwXIfr" target="_blank">
+            <img src="C:\Users\Michael Macalinao\Downloads\Rudy-Web\facebook.png.jpg" alt="Facebook">
+        </a>
+
+        <a href="https://t.me/RUDYTHEDEERFORLIFE" target="_blank">
+            <img src="C:\Users\Michael Macalinao\Downloads\Rudy-Web\telegram.png.jpg" alt="Telegram">
+        </a>
+
+        <a href="https://www.tiktok.com/@crypdev2025?_r=1&_t=ZS-91fAYQnWV55" target="_blank">
+            <img src="C:\Users\Michael Macalinao\Downloads\Rudy-Web\tiktok.png.jpg" alt="Tiktok">
+        </a>
+
+        <a href="https://x.com/crypdevz?s=21" target="_blank">
+            <img src="C:\Users\Michael Macalinao\Downloads\Rudy-Web\x-logo.png.jpg" alt="X">
+        </a>
+
+        <a href="https://discord.gg/czFj3UmEk" target="_blank">
+            <img src="C:\Users\Michael Macalinao\Downloads\Rudy-Web\discord.png.jpg" alt="Discord">
+        </a>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p class="center">
+        <b>Contract Address:</b><br>
+        CA: <b>3whEvJ3ByhtmBLJQJ1nYfTgPEmm3aha7bWzuXifNpump</b>
+    </p>
+</section>
+
+<footer>
+    © 2025 $RUDY – Official Coin Website
+</footer>
+
+</body>
+</html>
